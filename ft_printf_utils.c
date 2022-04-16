@@ -6,7 +6,7 @@
 /*   By: hlim <hlim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/16 15:12:01 by hlim              #+#    #+#             */
-/*   Updated: 2022/04/16 17:15:05 by hlim             ###   ########.fr       */
+/*   Updated: 2022/04/16 17:59:15 by hlim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,11 +26,11 @@ int	ft_putnbr(int nb)
 	}
 	if (n >= 10)
 	{
-		len += ft_putnbr(nb / 10);
-		len += ft_putnbr(nb % 10);
+		len += ft_putnbr(n / 10);
+		len += ft_putnbr(n % 10);
 	}
 	else
-		len += ft_putchar(nb + 48);
+		len += ft_putchar(n + 48);
 	return (len);
 }
 
@@ -42,14 +42,14 @@ int	ft_putadr(unsigned long int nb)
 	if (nb >= 16)
 	{
 		len += ft_putadr(nb / 16);
-		len ++ ft_putadr(nb % 16);
+		len += ft_putadr(nb % 16);
 	}
 	else
 	{
 		if (nb < 10)
-			len += ft_putnbr(nb + 48);
+			len += ft_putchar(nb + 48);
 		else
-			len += ft_putnbr(nb + 87);
+			len += ft_putchar(nb + 87);
 	}
 	return (len);
 }

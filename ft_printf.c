@@ -6,7 +6,7 @@
 /*   By: hlim <hlim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/09 19:43:51 by hlim              #+#    #+#             */
-/*   Updated: 2022/04/16 17:22:38 by hlim             ###   ########.fr       */
+/*   Updated: 2022/04/16 17:52:11 by hlim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,12 +24,13 @@ int	format_checker(char c, va_list *ap)
 {
 	int	len;
 
+	len = 0;
 	if (c == 'c')
 		len += ft_putchar(va_arg(*ap, int));
 	else if (c == '%')
 		len += write(1, "%", 1);
 	else if (c == 'd' || c == 'i')
-		len += ft_putnbr(va_arg(*ap, unsigned int));
+		len += ft_putnbr(va_arg(*ap, int));
 	else if (c == 'u')
 		len += ft_putunbr(va_arg(*ap, unsigned int));
 	else if (c == 'x')

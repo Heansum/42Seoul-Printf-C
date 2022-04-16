@@ -18,6 +18,6 @@ clean:
 	rm -rf $(OBJS)
 
 fclean:
-	rm -rf $(NAME)
+	rm -rf $(NAME) $(OBJS)
 
 re: fclean all

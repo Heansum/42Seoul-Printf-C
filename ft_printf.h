@@ -6,12 +6,12 @@
 /*   By: hlim <hlim@student.42seoul.kr>             +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/04/16 14:41:30 by hlim              #+#    #+#             */
-/*   Updated: 2022/04/16 17:24:11 by hlim             ###   ########.fr       */
+/*   Updated: 2022/04/16 17:49:16 by hlim             ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#ifndef PRINTF_H
-# define PRINTF_H
+#ifndef FT_PRINTF_H
+# define FT_PRINTF_H
 # include <stdarg.h>
 # include <unistd.h>
 
